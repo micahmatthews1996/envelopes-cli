@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# IDEs
+.vscode/
+.idea/
+
+# Environment files
+.env
+
+# Personal expense data
+expenses.json
