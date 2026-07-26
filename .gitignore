@@ -2,12 +2,28 @@
 __pycache__/
 *.py[cod]
 
-# IDEs
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# IDE
 .vscode/
 .idea/
+.sublime/
 
-# Environment files
+# OS
+.DS_Store
+Thumbs.db
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+
+# Environment variables
 .env
 
-# Personal expense data
+# Application data
 expenses.json
+categories.json
+budgets.json

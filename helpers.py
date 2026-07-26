@@ -27,16 +27,22 @@ def display_sort_menu():
 def display_menu():
     """Display the application's main menu."""
 
-    print("===== Expense Tracker ====\n" \
-        "1. Add Expense\n" \
-        "2. View Expenses\n" \
-        "3. View Total\n" \
-        "4. Delete Expense\n" \
-        "5. Edit Expense\n" \
-        "6. Sort Expenses\n" \
-        "7. Search Expenses\n" \
-        "8. Reports\n" \
-        "9. Exit")
+    print("===== Envelopes ====\n" \
+        "1. Dashboard\n" \
+        "2. Add Expense\n" \
+        "3. View Expenses\n" \
+        "4. View Total\n" \
+        "5. Delete Expense\n" \
+        "6. Edit Expense\n" \
+        "7. Sort Expenses\n" \
+        "8. Search Expenses\n" \
+        "9. Reports\n" \
+        "10. Manage Categories\n" \
+        "11. Manage Budgets\n" \
+        "12. Exit")
+    print("=" * 40)
+    print(f"{APP_NAME} v{VERSION}")
+    print("=" * 40)
 
 def display_reports_menu():
     """Display the reports menu."""
@@ -68,6 +74,7 @@ def search_menu(expenses):
             return
         else:
             print("Invalid option.")
+
 
 def get_category(categories):
     """Prompt the user to select an expense category."""
@@ -135,3 +142,16 @@ def get_valid_amount(prompt="Enter amount: "):
 
         except ValueError:
             print("Invalid amount. Please enter a number")
+
+
+def category_in_use(category, expenses, budgets):
+    """Return True if a category is used by an expense or budget."""
+
+    for expense in expenses:
+        if expense["category"] == category:
+            return True
+
+    if category in budgets:
+        return True
+
+    return False
