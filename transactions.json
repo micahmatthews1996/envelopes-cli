@@ -1,0 +1,137 @@
+[
+    {
+        "id": "e820be65-fa50-43b7-9119-c8e1dc4af63c",
+        "type": "expense",
+        "name": "Water",
+        "amount": 89.06,
+        "category": "Utilities",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-19"
+    },
+    {
+        "id": "23bf2fd3-8f38-4447-8e5b-7ffe2037f317",
+        "type": "expense",
+        "name": "Vape",
+        "amount": 80.98,
+        "category": "Other",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-20"
+    },
+    {
+        "id": "9dd93654-85aa-4d2f-8bbb-7e47a42c4b36",
+        "type": "expense",
+        "name": "Electricity",
+        "amount": 567.0,
+        "category": "Utilities",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-20"
+    },
+    {
+        "id": "c78d1244-c339-466f-baa1-d08a006ff824",
+        "type": "expense",
+        "name": "Coffee",
+        "amount": 7.89,
+        "category": "Food",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-20"
+    },
+    {
+        "id": "9110df94-1a20-482d-8c85-52f18f498b0a",
+        "type": "expense",
+        "name": "Bus pass",
+        "amount": 30.0,
+        "category": "Transportation",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-25"
+    },
+    {
+        "id": "a0ae14f7-fc75-47a1-9f1f-a6ab98a0c471",
+        "type": "expense",
+        "name": "Burgers",
+        "amount": 80.0,
+        "category": "Food",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-25"
+    },
+    {
+        "id": "57d4d40f-434f-4420-ae7f-c29ea1ad39c1",
+        "type": "expense",
+        "name": "Disney",
+        "amount": 50.0,
+        "category": "Entertainment",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-25"
+    },
+    {
+        "id": "54d44c7b-8b6a-4ad8-a36a-26a31903b9b4",
+        "type": "expense",
+        "name": "Vape",
+        "amount": 5.0,
+        "category": "Smoking",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-25"
+    },
+    {
+        "id": "f7d81339-359a-46ee-b36b-58e6faac6c8f",
+        "type": "expense",
+        "name": "Bike",
+        "amount": 100.0,
+        "category": "Transportation",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-25"
+    },
+    {
+        "id": "cc3863c2-8b06-4499-8482-9a1d60a5ba22",
+        "type": "income",
+        "name": "Paycheck",
+        "amount": 100.0,
+        "category": "Other",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-27"
+    },
+    {
+        "id": "c4c0e112-0d85-40fd-8522-8bddd2185147",
+        "type": "expense",
+        "name": "bill",
+        "amount": 500.0,
+        "category": "Farts",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-27"
+    },
+    {
+        "id": "c0093c15-c6a6-46fd-9d9f-2b40a47a8f42",
+        "type": "expense",
+        "name": "Pills",
+        "amount": 5.0,
+        "category": "Healthcare",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-27"
+    },
+    {
+        "id": "699fac1e-0874-448a-9bd7-edcc2c061bfb",
+        "type": "income",
+        "name": "Paycheck july",
+        "amount": 900.0,
+        "category": "Other",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-27"
+    },
+    {
+        "id": "6b38ef4e-f5de-40e9-9c24-ddd0e3da00b8",
+        "type": "expense",
+        "name": "Rent(july)",
+        "amount": 161.0,
+        "category": "Other",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-27"
+    },
+    {
+        "id": "449a916c-3845-464d-9499-6241a5403c00",
+        "type": "expense",
+        "name": "Rent",
+        "amount": 121.0,
+        "category": "Housing",
+        "account_id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "date": "2026-07-27"
+    }
+]

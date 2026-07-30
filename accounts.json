@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1c49cf52-a42a-461a-8464-730b9f960c44",
+        "name": "Checking",
+        "type": "Checking",
+        "starting_balance": 900.0
+    },
+    {
+        "id": "0a294daf-fba3-4fd6-84d3-e631f40bb929",
+        "name": "Foodstamps",
+        "type": "Credit Card",
+        "starting_balance": 0.0
+    }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "category": "Food",
+        "amount": 60.0,
+        "year": 2026,
+        "month": 7
+    },
+    {
+        "category": "Entertainment",
+        "amount": 50.0,
+        "year": 2026,
+        "month": 7
+    },
+    {
+        "category": "Smoking",
+        "amount": 20.0,
+        "year": 2026,
+        "month": 7
+    },
+    {
+        "category": "Healthcare",
+        "amount": 30.0,
+        "year": 2026,
+        "month": 7
+    },
+    {
+        "category": "Housing",
+        "amount": 650.0,
+        "year": 2026,
+        "month": 7
+    },
+    {
+        "category": "Entertainment",
+        "amount": 50.0,
+        "year": 2026,
+        "month": 8
+    },
+    {
+        "category": "Food",
+        "amount": 60.0,
+        "year": 2026,
+        "month": 8
+    },
+    {
+        "category": "Healthcare",
+        "amount": 30.0,
+        "year": 2026,
+        "month": 8
+    },
+    {
+        "category": "Housing",
+        "amount": 650.0,
+        "year": 2026,
+        "month": 8
+    },
+    {
+        "category": "Smoking",
+        "amount": 20.0,
+        "year": 2026,
+        "month": 8
+    }
+]

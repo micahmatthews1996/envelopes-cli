@@ -1,157 +1,120 @@
 """
-helpers.py
-
-Contains reusable helper functions for input validation
-and user interaction.
+Reusable CLI display and input helpers for Envelopes.
 """
 
-def exit_program():
-    """Display a farewell message before exiting the application."""
-    print("Goodbye!")
+APP_NAME = "Envelopes"
+VERSION = "3.2.0"
 
-def invalid_option():
-    """Display an invalid menu option message."""
 
-    print("Invalid Option...")
+def exit_program() -> None:
+    """Display the application farewell message."""
 
-def display_sort_menu():
-    """Display the available expense sorting options."""
+    print("\nGoodbye!")
 
-    print("\n==== Sort Expenses ====\n" \
-        "1. Newest First\n" \
-        "2. Oldest First\n" \
-        "3. Highest Amount\n" \
-        "4. Lowest Amount\n" \
-        "5. Category" )
 
-def display_menu():
+def invalid_option() -> None:
+    """Display the standard invalid-option message."""
+
+    print("Invalid option.")
+
+
+def display_menu() -> None:
     """Display the application's main menu."""
 
-    print("===== Envelopes ====\n" \
-        "1. Dashboard\n" \
-        "2. Add Expense\n" \
-        "3. View Expenses\n" \
-        "4. View Total\n" \
-        "5. Delete Expense\n" \
-        "6. Edit Expense\n" \
-        "7. Sort Expenses\n" \
-        "8. Search Expenses\n" \
-        "9. Reports\n" \
-        "10. Manage Categories\n" \
-        "11. Manage Budgets\n" \
-        "12. Exit")
+    print(
+        "\n===== Envelopes =====\n"
+        "1. Dashboard\n"
+        "2. Manage Accounts\n"
+        "3. Manage Transactions\n"
+        "4. Manage Categories\n"
+        "5. Manage Budgets\n"
+        "6. Reports\n"
+        "7. Exit"
+    )
     print("=" * 40)
     print(f"{APP_NAME} v{VERSION}")
     print("=" * 40)
 
-def display_reports_menu():
-    """Display the reports menu."""
 
-    print("\n==== Reports ====\n"
-        "1. Expense Summary\n"
-        "2. Category Report\n"
-        "3. Back"
+def display_accounts_menu() -> None:
+    """Display the account-management menu."""
+
+    print(
+        "\n===== Accounts =====\n"
+        "1. View Accounts\n"
+        "2. Create Account\n"
+        "3. Edit Account\n"
+        "4. Delete Account\n"
+        "5. View Account Balance\n"
+        "6. Back"
     )
 
-def search_menu(expenses):
-    """Display the search menu and handle search options."""
+
+def display_transactions_menu() -> None:
+    """Display the transaction-management menu."""
+
+    print(
+        "\n===== Transactions =====\n"
+        "1. View Transactions\n"
+        "2. Add Income\n"
+        "3. Add Expense\n"
+        "4. Edit Transaction\n"
+        "5. Delete Transaction\n"
+        "6. Search Transactions\n"
+        "7. Sort Transactions\n"
+        "8. Back"
+    )
+
+
+def get_category(
+    categories: list[str],
+) -> str:
+    """Prompt the user to select a category."""
 
     while True:
-        print("\n==== Search ====")
-        print("1. Name / Category / Date")
-        print("2. Amount Range")
-        print("3. Back")
+        print("\n===== Categories =====")
 
-        choice = input("\nChoose an option: ")
-
-        if choice == "1":
-            search_by_keyword(expenses)
-
-        elif choice == "2":
-            search_by_amount(expenses)
-
-        elif choice == "3":
-            return
-        else:
-            print("Invalid option.")
-
-
-def get_category(categories):
-    """Prompt the user to select an expense category."""
-
-
-    while True:
-        print("\n==== Categories ====")
-
-        for index, category in enumerate(categories, start=1):
+        for index, category in enumerate(
+            categories,
+            start=1,
+        ):
             print(f"{index}. {category}")
 
-        choice = input("\nChoose a category: ")
-
-        try:  
-            choice = int(choice)
-
-        except ValueError:
-            print("Invalid input.")
-            continue
-
-        if choice < 1 or choice > len(categories):
-            print("Invalid category choice.") 
-            continue
-
-        return categories[choice - 1]
-
-
-
-def get_expense_choice(expenses):
-    """Get a valid expense choice from the user."""
-
-    if not expenses:
-        print("There are no expenses recorded")
-        return None 
-
-    choice = input("Enter the expense number: ")
-
-    try:
-        choice = int(choice)
-
-    except ValueError:
-        print("Invalid input.")
-        return None
-
-    if choice < 1 or choice > len(expenses):
-        print("Invalid expense number.")
-        return None 
-
-    return choice - 1
-
-def get_valid_amount(prompt="Enter amount: "):
-    """Prompt the user for a valid positive monetary amount."""
-
-    while True:
-        amount = input(prompt)
+        choice = input(
+            "\nChoose a category: "
+        ).strip()
 
         try:
-            amount = float(amount)
+            category_index = int(choice) - 1
 
-            if amount <= 0:
-                print("Amount must be greater than zero.")
-                continue
+            if category_index < 0:
+                raise IndexError
 
-            return amount
+            return categories[category_index]
+
+        except (ValueError, IndexError):
+            print("Invalid category choice.")
+
+
+def get_valid_amount(
+    prompt: str = "Enter amount: ",
+) -> float:
+    """Prompt until the user enters a positive amount."""
+
+    while True:
+        amount_input = input(prompt).strip()
+
+        try:
+            amount = float(amount_input)
 
         except ValueError:
-            print("Invalid amount. Please enter a number")
+            print(
+                "Invalid amount. Please enter a number."
+            )
+            continue
 
+        if amount <= 0:
+            print("Amount must be greater than zero.")
+            continue
 
-def category_in_use(category, expenses, budgets):
-    """Return True if a category is used by an expense or budget."""
-
-    for expense in expenses:
-        if expense["category"] == category:
-            return True
-
-    if category in budgets:
-        return True
-
-    return False
+        return amount
